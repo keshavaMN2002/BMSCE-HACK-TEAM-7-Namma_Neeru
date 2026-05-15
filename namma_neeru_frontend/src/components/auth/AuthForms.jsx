@@ -4,6 +4,21 @@ import { ArrowLeft, ArrowRight, ShieldCheck, CheckCircle2 } from 'lucide-react';
 import { toast } from 'sonner';
 import { motion } from 'framer-motion';
 
+const InputField = ({ label, name, type = 'text', placeholder, required = true, value, onChange }) => (
+  <div className="mb-4">
+    <label className="block text-sm font-bold text-slate-700 mb-1.5">{label}</label>
+    <input
+      type={type}
+      name={name}
+      value={value}
+      onChange={onChange}
+      placeholder={placeholder}
+      required={required}
+      className="w-full px-4 py-3.5 bg-slate-50 border border-slate-200 rounded-xl text-slate-900 focus:outline-none focus:ring-2 focus:ring-primary-blue/30 focus:border-primary-blue transition-all placeholder:text-slate-400 font-medium"
+    />
+  </div>
+);
+
 const AuthForms = () => {
   const { authMode, selectedRole, setAuthMode, setSelectedRole, login } = useAuthStore();
   const [isLoading, setIsLoading] = useState(false);
@@ -53,20 +68,7 @@ const AuthForms = () => {
     }, 1200);
   };
 
-  const InputField = ({ label, name, type = 'text', placeholder, required = true }) => (
-    <div className="mb-4">
-      <label className="block text-sm font-bold text-slate-700 mb-1.5">{label}</label>
-      <input
-        type={type}
-        name={name}
-        value={formData[name]}
-        onChange={handleChange}
-        placeholder={placeholder}
-        required={required}
-        className="w-full px-4 py-3.5 bg-slate-50 border border-slate-200 rounded-xl text-slate-900 focus:outline-none focus:ring-2 focus:ring-primary-blue/30 focus:border-primary-blue transition-all placeholder:text-slate-400 font-medium"
-      />
-    </div>
-  );
+
 
   return (
     <div className="w-full max-w-md mx-auto">
@@ -105,17 +107,23 @@ const AuthForms = () => {
         {/* CUSTOMER & WORKER REGISTRATION */}
         {authMode === 'register' && selectedRole !== 'official' && (
           <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }}>
+<<<<<<< HEAD
             <InputField label="Full Name" name="user" placeholder="Enter your full name" />
             <InputField label="Email Address" name="email" type="email" placeholder="Enter your email" />
             <InputField label="Mobile Number" name="mobile" type="tel" placeholder="+91 98765 43210" />
             <InputField label="Aadhaar Number" name="aadhaar" placeholder="12-digit Aadhaar number" />
             <InputField label="Password" name="password" type="password" placeholder="Create a strong password" />
+=======
+            <InputField label="Full Name" name="name" placeholder="Enter your full name" value={formData.name} onChange={handleChange} />
+            <InputField label="Mobile Number" name="mobile" type="tel" placeholder="+91 98765 43210" value={formData.mobile} onChange={handleChange} />
+            <InputField label="Aadhaar Number" name="aadhaar" placeholder="12-digit Aadhaar number" value={formData.aadhaar} onChange={handleChange} />
+>>>>>>> 69fcec5 (fixed forms)
             
             {/* WORKER SPECIFIC */}
             {selectedRole === 'worker' && (
               <>
-                <InputField label="Vehicle Registration Number" name="vehicle" placeholder="e.g. KA-01-AB-1234" />
-                <InputField label="Driving License Number" name="dl" placeholder="Enter DL number" />
+                <InputField label="Vehicle Registration Number" name="vehicle" placeholder="e.g. KA-01-AB-1234" value={formData.vehicle} onChange={handleChange} />
+                <InputField label="Driving License Number" name="dl" placeholder="Enter DL number" value={formData.dl} onChange={handleChange} />
                 
                 <div className="mb-6 p-4 rounded-xl border border-dashed border-slate-300 bg-slate-50 flex flex-col items-center justify-center text-center">
                   <p className="text-sm font-bold text-slate-700 mb-1">Upload Documents</p>
@@ -132,16 +140,16 @@ const AuthForms = () => {
         {/* CUSTOMER & WORKER LOGIN */}
         {authMode === 'login' && selectedRole !== 'official' && (
           <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }}>
-            <InputField label="Mobile Number" name="mobile" type="tel" placeholder="+91 98765 43210" />
-            <InputField label="Password or OTP" name="password" type="password" placeholder="Enter password or OTP" />
+            <InputField label="Mobile Number" name="mobile" type="tel" placeholder="+91 98765 43210" value={formData.mobile} onChange={handleChange} />
+            <InputField label="Password or OTP" name="password" type="password" placeholder="Enter password or OTP" value={formData.password} onChange={handleChange} />
           </motion.div>
         )}
 
         {/* OFFICIAL LOGIN (Only Login allowed) */}
         {selectedRole === 'official' && (
           <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }}>
-            <InputField label="Official User ID" name="officialId" placeholder="e.g. BWSSB-EMP-2024" />
-            <InputField label="Secure Password" name="password" type="password" placeholder="Enter your portal password" />
+            <InputField label="Official User ID" name="officialId" placeholder="e.g. BWSSB-EMP-2024" value={formData.officialId} onChange={handleChange} />
+            <InputField label="Secure Password" name="password" type="password" placeholder="Enter your portal password" value={formData.password} onChange={handleChange} />
           </motion.div>
         )}
 

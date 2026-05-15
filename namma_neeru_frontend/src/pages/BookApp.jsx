@@ -30,26 +30,26 @@ const BookApp = () => {
   return (
     <div className="min-h-screen bg-[#F8FAFC] flex flex-col">
       <Navbar />
-      
+
       <main className="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-8 flex flex-col gap-10">
-        
+
         {/* HERO SECTION */}
         <div className="flex flex-col lg:flex-row gap-6 items-stretch">
-          
+
           {/* Left Booking Panel */}
           <div className="w-full lg:w-[400px] shrink-0 flex flex-col">
             <div className="bg-white p-6 rounded-3xl shadow-soft border border-surface-border flex flex-col h-full">
               <h2 className="text-[28px] font-bold text-content-primary mb-1">Book Water Tanker</h2>
               <p className="text-content-secondary text-sm mb-6">Fast. Reliable. Verified.</p>
-              
+
               <div className="space-y-4 flex-1">
                 {/* Location */}
                 <div className="space-y-1.5">
                   <label className="text-xs font-bold text-content-primary">Delivery Location</label>
                   <div className="relative">
                     <MapPin className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-primary-blue" />
-                    <input 
-                      type="text" 
+                    <input
+                      type="text"
                       placeholder="HSR Layout, Sector 2, Bengaluru"
                       className="w-full pl-9 pr-4 py-3 bg-surface rounded-xl border border-surface-border focus:outline-none focus:ring-2 focus:ring-primary-blue/20 focus:border-primary-blue transition-all text-sm font-medium"
                     />
@@ -65,7 +65,7 @@ const BookApp = () => {
                     <label className="text-xs font-bold text-content-primary">Water Quantity</label>
                     <div className="relative">
                       <Droplet className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-primary-blue" />
-                      <select 
+                      <select
                         value={selectedQuantity}
                         onChange={(e) => setBookingState({ selectedQuantity: Number(e.target.value) })}
                         className="w-full pl-9 pr-4 py-3 bg-surface rounded-xl border border-surface-border focus:outline-none focus:ring-2 focus:ring-primary-blue/20 appearance-none text-sm font-bold text-content-primary"
@@ -82,7 +82,7 @@ const BookApp = () => {
                     <label className="text-xs font-bold text-content-primary">Delivery Type</label>
                     <div className="relative">
                       <Clock className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-primary-blue" />
-                      <select 
+                      <select
                         value={selectedType}
                         onChange={(e) => setBookingState({ selectedType: e.target.value })}
                         className="w-full pl-9 pr-4 py-3 bg-surface rounded-xl border border-surface-border focus:outline-none focus:ring-2 focus:ring-primary-blue/20 appearance-none text-sm font-bold text-content-primary"
@@ -114,7 +114,7 @@ const BookApp = () => {
                   <label className="text-xs font-bold text-content-primary">Special Instructions <span className="text-content-secondary font-normal">(Optional)</span></label>
                   <div className="relative">
                     <MessageSquare className="absolute left-3 top-3 w-4 h-4 text-content-secondary" />
-                    <textarea 
+                    <textarea
                       placeholder="E.g., Gate number, landmark, any notes..."
                       className="w-full pl-9 pr-4 py-3 bg-surface rounded-xl border border-surface-border focus:outline-none focus:ring-2 focus:ring-primary-blue/20 focus:border-primary-blue transition-all resize-none h-[70px] text-sm"
                     ></textarea>
@@ -149,9 +149,9 @@ const BookApp = () => {
           {/* Right Live Map Section */}
           <div className="flex-1 min-w-0 min-h-[400px] relative rounded-3xl overflow-hidden shadow-soft border border-surface-border bg-slate-50">
             <MapboxWrapper />
-            
+
             {/* Floating Info Card (Top Left) */}
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
               className="absolute top-6 left-6 bg-white p-4 rounded-2xl shadow-premium border border-surface-border min-w-[220px] flex gap-4 z-10"
@@ -197,7 +197,7 @@ const BookApp = () => {
             <h3 className="text-xl font-bold text-content-primary">Nearby Tankers</h3>
             <button className="text-sm font-bold text-primary-blue hover:underline">View All</button>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
             {tankers.map(tanker => (
               <Card key={tanker.id} className="flex flex-col relative overflow-hidden p-5 shadow-sm hover:shadow-premium transition-shadow border border-surface-border">
@@ -208,7 +208,7 @@ const BookApp = () => {
                 )}
                 <div className="flex items-center gap-3 mb-4">
                   <div className="w-20 h-14 bg-slate-50 rounded-xl flex items-center justify-center shrink-0 border border-surface-border p-1">
-                     <img src={truckImg} alt="Tanker" className="w-[120%] h-auto drop-shadow-sm scale-110" />
+                    <img src={truckImg} alt="Tanker" className="w-[120%] h-auto drop-shadow-sm scale-110" />
                   </div>
                   <div>
                     <h4 className="font-bold text-content-primary text-sm">{tanker.id}</h4>
@@ -217,13 +217,13 @@ const BookApp = () => {
                     </div>
                   </div>
                 </div>
-                
+
                 <div className="flex items-center gap-2 text-[11px] text-content-secondary mb-4 font-medium uppercase tracking-wider">
                   <span>{tanker.distance}</span>
                   <span className="w-1 h-1 bg-slate-300 rounded-full"></span>
                   <span>ETA {tanker.eta}</span>
                 </div>
-                
+
                 <div className="mt-auto flex items-center justify-between pt-4 border-t border-surface-border">
                   <span className="font-bold text-xl text-content-primary">₹{tanker.price}</span>
                   <Button variant="primary" size="sm" className="px-6 font-bold">Select</Button>
