@@ -2,7 +2,7 @@ from fastapi import Depends, HTTPException, status, Request
 from jose import jwt, JWTError
 from sqlalchemy.orm import Session
 from app.config.database import get_db
-from app.services.user_service import UserService
+
 from app.utils.security import SECRET_KEY, ALGORITHM
 
 def get_token_from_cookie(request: Request):
@@ -26,12 +26,23 @@ def get_current_user(request: Request, db: Session = Depends(get_db)):
     try:
         payload = jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM])
         user_id: str = payload.get("sub")
-        if user_id is None:
+        role: str = payload.get("role")
+        if user_id is None or role is None:
             raise credentials_exception
     except JWTError:
         raise credentials_exception
         
-    user = UserService.get_user(db, user_id=int(user_id))
+    user = None
+    if role == "customer":
+        from app.services.customer_service import CustomerService
+        user = CustomerService.get_customer(db, customer_id=int(user_id))
+    elif role == "worker":
+        from app.services.worker_service import WorkerService
+        user = WorkerService.get_worker(db, worker_id=int(user_id))
+    elif role == "official":
+        from app.services.official_service import OfficialService
+        user = OfficialService.get_official(db, official_id=int(user_id))
+        
     if user is None:
         raise credentials_exception
     return user
