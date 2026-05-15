@@ -1,0 +1,203 @@
+ward_number,ward_name,num_connections,consumption_ml,ward_name_clean,timing_length,subdivision,service_station,days_supply,consumption_per_conn
+1,Kempegowda Ward,4418,109.74,KEMPEGOWDA WARD,4.0,North East - 3,Manorayanna palya service station,1,0.024839293798098686
+2,Chowdeshwari Ward,467,56.01,CHOWDESHWARI WARD,4.0,North East - 3,Manorayanna palya service station,1,0.11993576017130621
+3,Attur,6800,171.05,ATTUR,4.0,North East - 3,Manorayanna palya service station,1,0.025154411764705883
+4,Yelahanka Satellite town,7814,368.22,YELAHANKA SATELLITE TOWN,4.0,North East - 3,Manorayanna palya service station,1,0.04712311236242642
+5,Jakkur,4165,110.83,JAKKUR,4.0,North East - 3,Manorayanna palya service station,1,0.02660984393757503
+6,Thanisandra,4794,88.4,THANISANDRA,4.0,North East - 3,Manorayanna palya service station,1,0.01843971631205674
+7,Byatarayanapura,9781,285.57,BYATARAYANAPURA,4.0,North East - 3,Manorayanna palya service station,1,0.029196401185972803
+8,Kodigehalli,5529,130.32,KODIGEHALLI,4.0,North East - 3,Manorayanna palya service station,1,0.023570265870862722
+9,Vidyaranyapura,12972,274.02,VIDYARANYAPURA,4.0,North East - 3,Manorayanna palya service station,1,0.02112395929694727
+10,Doddabommasandra,1921,30.17,DODDABOMMASANDRA,4.0,North East - 3,Manorayanna palya service station,1,0.015705361790733993
+11,Kuvempunagar,4640,64.55,KUVEMPUNAGAR,4.0,North East - 3,Manorayanna palya service station,1,0.013911637931034481
+12,Shettyhalli,11814,180.95,SHETTYHALLI,4.0,North East - 3,Manorayanna palya service station,1,0.01531657355679702
+13,Mallasandra,4565,62.17,MALLASANDRA,4.0,North East - 3,Manorayanna palya service station,1,0.013618838992332969
+14,Bagalagunte,8844,208.85,BAGALAGUNTE,4.0,North East - 3,Manorayanna palya service station,1,0.023614880144730892
+14,sidedahalli,1628,40.44,SIDEDAHALLI,4.0,North East - 3,Manorayanna palya service station,1,0.02484029484029484
+15,T. Dasarahalli,4603,133.91,T. DASARAHALLI,4.0,North East - 3,Manorayanna palya service station,1,0.029091896589180967
+16,Jalahalli,3117,89.21,JALAHALLI,4.0,North East - 3,Manorayanna palya service station,1,0.0286204683991017
+17,J.P.Park,5749,120.05,J.P.PARK,4.0,North East - 3,Manorayanna palya service station,1,0.02088189250304401
+18,Radhakrishna Temple Ward,5513,91.1,RADHAKRISHNA TEMPLE WARD,4.0,North East - 3,Manorayanna palya service station,1,0.01652457826954471
+19,Sanjaynagar,5841,82.66,SANJAYNAGAR,4.0,North East - 3,Manorayanna palya service station,1,0.014151686355076186
+20,Ganganagar,3351,70.47,GANGANAGAR,4.0,North East - 3,Manorayanna palya service station,1,0.021029543419874664
+21,Hebbal,7512,160.69,HEBBAL,4.0,North East - 3,Manorayanna palya service station,1,0.021391107561235356
+22,VishwanathNagenahalli,3290,73.64,VISHWANATHNAGENAHALLI,4.0,North East - 3,Manorayanna palya service station,1,0.022382978723404254
+23,Nagavara,9267,187.37,NAGAVARA,4.0,North East - 3,Manorayanna palya service station,1,0.02021905686845797
+24,HBR Layout,8252,236.07,HBR LAYOUT,4.0,North East - 3,Manorayanna palya service station,1,0.028607610276296654
+25,Horamavu,16181,165.27,HORAMAVU,4.0,North East - 3,Manorayanna palya service station,1,0.010213831036400717
+26,Ramamurthynagar,9578,245.88,RAMAMURTHYNAGAR,4.0,North East - 3,Manorayanna palya service station,1,0.02567133013155147
+27,Banasawadi,9718,260.34,BANASAWADI,4.0,North East - 3,Manorayanna palya service station,1,0.026789462852438772
+28,Kammanahalli,6641,167.48,KAMMANAHALLI,4.0,North East - 3,Manorayanna palya service station,1,0.02521909351001355
+29,Kacharakanahalli,4902,120.16,KACHARAKANAHALLI,4.0,North East - 3,Manorayanna palya service station,1,0.024512443900448797
+30,Kadugondanahalli,5174,128.6,KADUGONDANAHALLI,4.0,North East - 3,Manorayanna palya service station,1,0.0248550444530344
+31,Kushalnagar,3147,54.1,KUSHALNAGAR,4.0,North East - 3,Manorayanna palya service station,1,0.01719097553225294
+32,Kavalbyrasandra,5595,103.15,KAVALBYRASANDRA,4.0,North East - 3,Manorayanna palya service station,1,0.018436103663985702
+33,Manorayanapalya,2742,60.88,MANORAYANAPALYA,4.0,North East - 3,Manorayanna palya service station,1,0.022202771699489424
+34,Gangenahalli,2324,47.61,GANGENAHALLI,4.0,North East - 3,Manorayanna palya service station,1,0.020486230636833046
+35,Aramane Nagar,2976,76.86,ARAMANE NAGAR,4.0,North East - 3,Manorayanna palya service station,1,0.025826612903225805
+36,Mathikere,4158,87.41,MATHIKERE,4.0,North East - 3,Manorayanna palya service station,1,0.021022126022126022
+37,Yeshwanthpur,3239,59.3,YESHWANTHPUR,4.0,North East - 3,Manorayanna palya service station,1,0.01830811979005866
+38,H.M.T,3695,136.51,H.M.T,4.0,North East - 3,Manorayanna palya service station,1,0.0369445196211096
+39,Chokkasandra,5838,133.8,CHOKKASANDRA,4.0,North East - 3,Manorayanna palya service station,1,0.022918807810894143
+40,Doddabidirakalu,1,0.0,DODDABIDIRAKALU,4.0,North East - 3,Manorayanna palya service station,1,0.0
+41,Peenya Industrial Area,10886,236.64,PEENYA INDUSTRIAL AREA,4.0,North East - 3,Manorayanna palya service station,1,0.021738012125665993
+42,Lakshmidevinagar,5165,107.14,LAKSHMIDEVINAGAR,4.0,North East - 3,Manorayanna palya service station,1,0.02074346563407551
+43,Nandini Layout,6476,151.01,NANDINI LAYOUT,4.0,North East - 3,Manorayanna palya service station,1,0.02331840642371834
+44,Marappanahalli,4451,110.91,MARAPPANAHALLI,4.0,North East - 3,Manorayanna palya service station,1,0.02491799595596495
+45,Malleshwaram,3662,98.22,MALLESHWARAM,4.0,North East - 3,Manorayanna palya service station,1,0.026821409066084108
+46,Jayachamarajendra Nagar,5336,178.74,JAYACHAMARAJENDRA NAGAR,4.0,North East - 3,Manorayanna palya service station,1,0.033497001499250376
+47,Devarajeevanahalli,3784,79.48,DEVARAJEEVANAHALLI,4.0,North East - 3,Manorayanna palya service station,1,0.021004228329809728
+48,Muneshwaranagar,2190,34.67,MUNESHWARANAGAR,4.0,North East - 3,Manorayanna palya service station,1,0.015831050228310502
+49,Lingarajapura,5774,91.75,LINGARAJAPURA,4.0,North East - 3,Manorayanna palya service station,1,0.015890197436785592
+50,Benniganahalli,5874,361.26,BENNIGANAHALLI,4.0,North East - 3,Manorayanna palya service station,1,0.061501532175689475
+51,Vijinapura,6346,122.86,VIJINAPURA,4.0,North East - 3,Manorayanna palya service station,1,0.01936022691459187
+52,K.R.Puram,8953,173.05,K.R.PURAM,4.0,North East - 3,Manorayanna palya service station,1,0.019328716631296775
+53,Basavanapura,8707,201.81,BASAVANAPURA,4.0,North East - 3,Manorayanna palya service station,1,0.02317790283679798
+54,Hoodi,5427,343.15,HOODI,4.0,North East - 3,Manorayanna palya service station,1,0.06323014556845402
+55,Devasandra,3364,84.27,DEVASANDRA,4.0,North East - 3,Manorayanna palya service station,1,0.02505053507728894
+56,A. Narayanapura,8456,220.21,A. NARAYANAPURA,4.0,North East - 3,Manorayanna palya service station,1,0.0260418637653737
+57,C.V. Ramannagar,3324,73.92,C.V. RAMANNAGAR,4.0,North East - 3,Manorayanna palya service station,1,0.02223826714801444
+58,Hosathippasandra,6026,144.13,HOSATHIPPASANDRA,4.0,North East - 3,Manorayanna palya service station,1,0.023918021905077996
+59,Maruthiseva Nagar,5590,158.47,MARUTHISEVA NAGAR,4.0,North East - 3,Manorayanna palya service station,1,0.028348837209302324
+60,Sagayapuram,4268,90.41,SAGAYAPURAM,4.0,North East - 3,Manorayanna palya service station,1,0.021183223992502342
+61,S.K. Garden,2875,74.27,S.K. GARDEN,4.0,North East - 3,Manorayanna palya service station,1,0.02583304347826087
+62,Ramaswamy palya,3131,73.42,RAMASWAMY PALYA,4.0,North East - 3,Manorayanna palya service station,1,0.023449377195784094
+63,Jayamahal,3085,117.16,JAYAMAHAL,4.0,North East - 3,Manorayanna palya service station,1,0.037977309562398705
+64,Rajamahal,3702,84.92,RAJAMAHAL,4.0,North East - 3,Manorayanna palya service station,1,0.022938951917882228
+65,Kadumalleshwara,5615,146.84,KADUMALLESHWARA,4.0,North East - 3,Manorayanna palya service station,1,0.02615138023152271
+66,Subramanyanagar,4292,113.37,SUBRAMANYANAGAR,4.0,North East - 3,Manorayanna palya service station,1,0.02641425908667288
+67,Nagapura,5814,168.34,NAGAPURA,4.0,North East - 3,Manorayanna palya service station,1,0.028954248366013072
+68,Mahalakshmipuram,5114,127.69,MAHALAKSHMIPURAM,4.0,North East - 3,Manorayanna palya service station,1,0.024968713335940553
+69,Laggere,10211,230.88,LAGGERE,4.0,North East - 3,Manorayanna palya service station,1,0.022610909803153462
+70,Rajagopalanagar,8396,181.46,RAJAGOPALANAGAR,4.0,North East - 3,Manorayanna palya service station,1,0.021612672701286327
+71,Hegganahalli,8695,219.79,HEGGANAHALLI,4.0,North East - 3,Manorayanna palya service station,1,0.02527774583093732
+72,herohalli,11904,246.36,HEROHALLI,4.0,North East - 3,Manorayanna palya service station,1,0.020695564516129035
+73,Kottigepalya,8532,199.53,KOTTIGEPALYA,4.0,North East - 3,Manorayanna palya service station,1,0.023386075949367088
+74,Shakthiganapathi nagar,6112,149.78,SHAKTHIGANAPATHI NAGAR,4.0,North East - 3,Manorayanna palya service station,1,0.02450589005235602
+75,Shankaramata,5220,142.0,SHANKARAMATA,4.0,North East - 3,Manorayanna palya service station,1,0.027203065134099615
+76,Gayathrinagar,4385,111.43,GAYATHRINAGAR,4.0,North East - 3,Manorayanna palya service station,1,0.02541163055872292
+77,Dattathreya Temple,4485,109.83,DATTATHREYA TEMPLE,4.0,North East - 3,Manorayanna palya service station,1,0.024488294314381272
+78,Pulikeshinagar,3641,119.25,PULIKESHINAGAR,4.0,North East - 3,Manorayanna palya service station,1,0.032751991211205714
+79,Sarvagnanagar,3370,73.15,SARVAGNANAGAR,4.0,North East - 3,Manorayanna palya service station,1,0.021706231454005936
+80,Hoysalanagar,5458,150.06,HOYSALANAGAR,4.0,North East - 3,Manorayanna palya service station,1,0.027493587394650056
+81,Vignananagar,7194,197.57,VIGNANANAGAR,4.0,North East - 3,Manorayanna palya service station,1,0.027463163747567416
+82,Garudacharpalya,4388,174.66,GARUDACHARPALYA,4.0,North East - 3,Manorayanna palya service station,1,0.039804010938924335
+83,Kadugodi,1149,57.36,KADUGODI,4.0,North East - 3,Manorayanna palya service station,1,0.04992167101827676
+84,Hagadooru,2020,109.88,HAGADOORU,4.0,North East - 3,Manorayanna palya service station,1,0.054396039603960396
+85,Doddanekkundi,5804,313.53,DODDANEKKUNDI,4.0,North East - 3,Manorayanna palya service station,1,0.054019641626464505
+85,Varthur,2403,102.27,VARTHUR,4.0,North East - 3,Manorayanna palya service station,1,0.042559300873907614
+86,Marathalli,4784,156.37,MARATHALLI,4.0,North East - 3,Manorayanna palya service station,1,0.03268603678929766
+87,HAL Airport,4379,88.0,HAL AIRPORT,4.0,North East - 3,Manorayanna palya service station,1,0.02009591230874629
+88,Jeevanbhimanagar,5997,140.86,JEEVANBHIMANAGAR,4.0,North East - 3,Manorayanna palya service station,1,0.02348841087210272
+89,Jogupalya,4062,124.2,JOGUPALYA,4.0,North East - 3,Manorayanna palya service station,1,0.030576070901033973
+90,Ulsoor,5628,305.96,ULSOOR,4.0,North East - 3,Manorayanna palya service station,1,0.054363894811656
+91,Bharathinagar,2252,112.97,BHARATHINAGAR,4.0,North East - 3,Manorayanna palya service station,1,0.05016429840142096
+92,Shivajinagar,5175,211.81,SHIVAJINAGAR,4.0,North East - 3,Manorayanna palya service station,1,0.04092946859903382
+93,Vasanthnagar,3749,259.19,VASANTHNAGAR,4.0,North East - 3,Manorayanna palya service station,1,0.06913576953854361
+94,Gandhinagar,4789,350.94,GANDHINAGAR,2.7,C-1,CHIKKALALBAGH 1 & 2,Daily,0.07328043432866987
+95,Subhashnagar,3090,61.87,SUBHASHNAGAR,4.0,North East - 3,Manorayanna palya service station,1,0.020022653721682847
+96,Okalipuram,3420,122.64,OKALIPURAM,4.0,North East - 3,Manorayanna palya service station,1,0.035859649122807015
+97,Dayanandanagar,3507,81.66,DAYANANDANAGAR,4.0,North East - 3,Manorayanna palya service station,1,0.023284858853721127
+98,Prakashnagar,3078,78.84,PRAKASHNAGAR,4.0,North East - 3,Manorayanna palya service station,1,0.0256140350877193
+99,Rajajinagar,3955,108.69,RAJAJINAGAR,4.0,North East - 3,Manorayanna palya service station,1,0.02748166877370417
+100,Basaveshwaranagar,5779,158.23,BASAVESHWARANAGAR,4.0,North East - 3,Manorayanna palya service station,1,0.027380169579512025
+101,Kamakshipalya,3686,91.11,KAMAKSHIPALYA,4.0,North East - 3,Manorayanna palya service station,1,0.024717851329354314
+102,Vrushabhavathi Nagar,4190,96.2,VRUSHABHAVATHI NAGAR,4.0,North East - 3,Manorayanna palya service station,1,0.02295942720763723
+103,Kaveripura,5040,101.06,KAVERIPURA,4.0,North East - 3,Manorayanna palya service station,1,0.020051587301587303
+104,Govindrajnagara,2921,75.32,GOVINDRAJNAGARA,4.0,North East - 3,Manorayanna palya service station,1,0.02578568983224923
+105,Agrahara Dasarahalli,3220,92.2,AGRAHARA DASARAHALLI,4.0,North East - 3,Manorayanna palya service station,1,0.02863354037267081
+106,Dr. Rajkumar Ward,2471,76.88,DR. RAJKUMAR WARD,4.0,North East - 3,Manorayanna palya service station,1,0.03111290975313638
+107,Shivanagar,2458,85.37,SHIVANAGAR,4.0,North East - 3,Manorayanna palya service station,1,0.03473148901545973
+108,Srirammandira ward,4680,112.16,SRIRAMMANDIRA WARD,4.0,North East - 3,Manorayanna palya service station,1,0.023965811965811965
+109,Chikpet,5622,107.59,CHIKPET,3.0000000000000004,C-1,CHIKKALALBAGH 1 & 2,Daily,0.019137317680540732
+110,Sampangiramnagar,3024,128.43,SAMPANGIRAMNAGAR,4.0,North East - 3,Manorayanna palya service station,1,0.042470238095238096
+111,Shanthala Nagar,3780,218.11,SHANTHALA NAGAR,4.0,North East - 3,Manorayanna palya service station,1,0.057701058201058204
+112,Dommalur,4801,184.44,DOMMALUR,4.0,North East - 3,Manorayanna palya service station,1,0.038416996459071026
+113,Konena Agrahara,3947,121.08,KONENA AGRAHARA,4.0,North East - 3,Manorayanna palya service station,1,0.03067646313655941
+114,Agaram,2927,136.18,AGARAM,4.0,North East - 3,Manorayanna palya service station,1,0.04652545268192689
+115,Vannarpet,5168,101.91,VANNARPET,4.0,North East - 3,Manorayanna palya service station,1,0.019719427244582043
+116,Neelasandra,2655,60.54,NEELASANDRA,4.0,North East - 3,Manorayanna palya service station,1,0.022802259887005648
+117,Shanthinagar,6222,227.44,SHANTHINAGAR,4.0,North East - 3,Manorayanna palya service station,1,0.036554162648666025
+118,Sudamnagar,5150,90.65,SUDAMNAGAR,4.0,North East - 3,Manorayanna palya service station,1,0.017601941747572816
+119,Dharmarayaswamy Temple Ward,4999,96.41,DHARMARAYASWAMY TEMPLE WARD,4.0,North East - 3,Manorayanna palya service station,1,0.019285857171434287
+120,Cottonpet,3090,62.9,COTTONPET,4.0,C-1,CHIKKALALBAGH 1 & 2,Daily,0.02035598705501618
+121,Binnypet,4581,94.77,BINNYPET,4.0,North East - 3,Manorayanna palya service station,1,0.02068762278978389
+122,Kempapura Agrahara,3965,85.25,KEMPAPURA AGRAHARA,4.0,North East - 3,Manorayanna palya service station,1,0.021500630517023958
+123,Vijaynagar,3639,82.48,VIJAYNAGAR,4.0,North East - 3,Manorayanna palya service station,1,0.022665567463588897
+124,Hosahalli,4521,104.46,HOSAHALLI,4.0,North East - 3,Manorayanna palya service station,1,0.023105507631055074
+125,Marenahalli,3433,87.54,MARENAHALLI,4.0,North East - 3,Manorayanna palya service station,1,0.025499563064375185
+126,Maruthi Mandira Ward,4028,98.37,MARUTHI MANDIRA WARD,4.0,North East - 3,Manorayanna palya service station,1,0.02442154915590864
+127,Moodalapalya,5885,125.57,MOODALAPALYA,4.0,North East - 3,Manorayanna palya service station,1,0.021337298215802887
+128,Nagarabhavi,10971,254.74,NAGARABHAVI,4.0,North East - 3,Manorayanna palya service station,1,0.02321939659101267
+129,Jnanabharathi ward,14008,324.23,JNANABHARATHI WARD,4.0,North East - 3,Manorayanna palya service station,1,0.02314605939463164
+130,Ullalu,9574,191.81,ULLALU,4.0,North East - 3,Manorayanna palya service station,1,0.020034468351786086
+131,Nayandanahalli,4405,126.93,NAYANDANAHALLI,4.0,North East - 3,Manorayanna palya service station,1,0.028814982973893306
+132,Attiguppe,5502,165.17,ATTIGUPPE,4.0,North East - 3,Manorayanna palya service station,1,0.03001999272991639
+133,Hampinagar,3038,77.18,HAMPINAGAR,4.0,North East - 3,Manorayanna palya service station,1,0.025404871626069785
+134,Bapujinagar,4504,130.22,BAPUJINAGAR,4.0,North East - 3,Manorayanna palya service station,1,0.02891207815275311
+135,Padarayanapura,2035,68.73,PADARAYANAPURA,4.0,North East - 3,Manorayanna palya service station,1,0.033773955773955776
+136,Jagareevanram Nagar,4827,122.62,JAGAREEVANRAM NAGAR,4.0,North East - 3,Manorayanna palya service station,1,0.025402941785788277
+137,Rayapuram,3456,75.61,RAYAPURAM,4.0,North East - 3,Manorayanna palya service station,1,0.02187789351851852
+138,Chalavadipalya,2389,50.62,CHALAVADIPALYA,4.0,North East - 3,Manorayanna palya service station,1,0.021188781917120134
+139,K.R. Market,2930,52.42,K.R. MARKET,4.0,C-1,CHIKKALALBAGH 1 & 2,Alternave,0.017890784982935153
+140,Chamrajpet,4778,164.06,CHAMRAJPET,4.0,North East - 3,Manorayanna palya service station,1,0.034336542486395984
+141,Azadnagar,4022,108.93,AZADNAGAR,4.0,North East - 3,Manorayanna palya service station,1,0.027083540527100946
+142,Sunkenahalli,2902,63.4,SUNKENAHALLI,4.0,North East - 3,Manorayanna palya service station,1,0.021847002067539627
+143,Vishweshrapuram,4750,105.76,VISHWESHRAPURAM,4.0,North East - 3,Manorayanna palya service station,1,0.02226526315789474
+144,Siddapura,4485,108.95,SIDDAPURA,4.0,North East - 3,Manorayanna palya service station,1,0.024292084726867336
+145,Hombegowdanagar,6565,188.67,HOMBEGOWDANAGAR,4.0,North East - 3,Manorayanna palya service station,1,0.028738766184310736
+146,Lakkasandra,2838,85.67,LAKKASANDRA,4.0,North East - 3,Manorayanna palya service station,1,0.03018675123326286
+147,Adugodi,3428,112.91,ADUGODI,4.0,North East - 3,Manorayanna palya service station,1,0.03293757292882147
+148,Ejipura,4800,140.03,EJIPURA,4.0,North East - 3,Manorayanna palya service station,1,0.029172916666666666
+149,Varthur,3327,145.63,VARTHUR,4.0,North East - 3,Manorayanna palya service station,1,0.04377216711752329
+150,Bellandur,6329,399.28,BELLANDUR,4.0,North East - 3,Manorayanna palya service station,1,0.0630873755727603
+151,Koramangala,7202,310.26,KORAMANGALA,4.0,North East - 3,Manorayanna palya service station,1,0.04307970008331019
+152,Sudduguntepalya,4089,150.6,SUDDUGUNTEPALYA,4.0,North East - 3,Manorayanna palya service station,1,0.036830520909757886
+153,Jayanagar,344,7.86,JAYANAGAR,4.0,North East - 3,Manorayanna palya service station,1,0.022848837209302326
+153,Jayangar,3659,137.48,JAYANGAR,4.0,North East - 3,Manorayanna palya service station,1,0.03757310740639519
+154,Basavanagudi,5818,132.53,BASAVANAGUDI,4.0,North East - 3,Manorayanna palya service station,1,0.022779305603300104
+155,Hanumanthanagar,4147,87.73,HANUMANTHANAGAR,4.0,North East - 3,Manorayanna palya service station,1,0.021155051844707017
+156,Srinagar,5692,141.35,SRINAGAR,4.0,North East - 3,Manorayanna palya service station,1,0.024833099086437105
+157,Gali Anjaneya swamy Temple Ward,5408,133.31,GALI ANJANEYA SWAMY TEMPLE WARD,4.0,North East - 3,Manorayanna palya service station,1,0.02465051775147929
+158,Deepanjali Nagar,2942,79.75,DEEPANJALI NAGAR,4.0,North East - 3,Manorayanna palya service station,1,0.027107409925220937
+159,Kengeri,14794,289.48,KENGERI,4.0,North East - 3,Manorayanna palya service station,1,0.01956739218602136
+160,Rajarajeshwarinagar,17021,422.05,RAJARAJESHWARINAGAR,4.0,North East - 3,Manorayanna palya service station,1,0.024795840432407026
+161,Hosakerehalli,7397,172.47,HOSAKEREHALLI,4.0,North East - 3,Manorayanna palya service station,1,0.02331620927403001
+162,Girinagar,7756,178.72,GIRINAGAR,4.0,North East - 3,Manorayanna palya service station,1,0.02304280556988138
+163,Katriguppe,6550,131.17,KATRIGUPPE,4.0,North East - 3,Manorayanna palya service station,1,0.02002595419847328
+164,Vidyapeetha Ward,4769,97.38,VIDYAPEETHA WARD,4.0,North East - 3,Manorayanna palya service station,1,0.020419375131054726
+165,Ganeshmandira Ward,4568,109.01,GANESHMANDIRA WARD,4.0,North East - 3,Manorayanna palya service station,1,0.0238638353765324
+166,Karisandra,4671,113.42,KARISANDRA,4.0,North East - 3,Manorayanna palya service station,1,0.02428173838578463
+167,Yadiyuru,4417,99.77,YADIYURU,4.0,North East - 3,Manorayanna palya service station,1,0.022587729227982793
+168,Pattabhiramnagar,4320,130.88,PATTABHIRAMNAGAR,4.0,North East - 3,Manorayanna palya service station,1,0.030296296296296297
+169,Byrasandra,3854,110.75,BYRASANDRA,4.0,North East - 3,Manorayanna palya service station,1,0.02873637778930981
+170,Jayanagar East,3890,97.28,JAYANAGAR EAST,4.0,North East - 3,Manorayanna palya service station,1,0.025007712082262212
+171,Gurappanapalya,4072,187.08,GURAPPANAPALYA,4.0,North East - 3,Manorayanna palya service station,1,0.04594302554027505
+172,Madiwala,5616,169.93,MADIWALA,4.0,North East - 3,Manorayanna palya service station,1,0.030258190883190886
+173,Jakkasandra,2858,117.87,JAKKASANDRA,4.0,North East - 3,Manorayanna palya service station,1,0.04124212736179146
+174,HSR Layout,14280,545.35,HSR LAYOUT,4.0,North East - 3,Manorayanna palya service station,1,0.03818977591036415
+175,Bommanahalli,6674,262.12,BOMMANAHALLI,4.0,North East - 3,Manorayanna palya service station,1,0.03927479772250524
+176,BTM Layout,7593,252.5,BTM LAYOUT,4.0,North East - 3,Manorayanna palya service station,1,0.03325431318319505
+177,J.P.Nagar,5648,162.65,J.P.NAGAR,4.0,North East - 3,Manorayanna palya service station,1,0.028797804532577905
+178,Sarakki,5629,165.82,SARAKKI,4.0,North East - 3,Manorayanna palya service station,1,0.029458163084029133
+179,Shakambarinagar,3787,104.31,SHAKAMBARINAGAR,4.0,North East - 3,Manorayanna palya service station,1,0.027544230261420652
+180,Banashankari Temple Ward,5205,112.21,BANASHANKARI TEMPLE WARD,4.0,North East - 3,Manorayanna palya service station,1,0.021558117195004802
+181,Kumaraswamy Layout,8445,242.02,KUMARASWAMY LAYOUT,4.0,North East - 3,Manorayanna palya service station,1,0.028658377738306692
+182,Padmanabhanagar,6048,159.96,PADMANABHANAGAR,4.0,North East - 3,Manorayanna palya service station,1,0.0264484126984127
+183,Chikkallasandra,5195,120.54,CHIKKALLASANDRA,4.0,North East - 3,Manorayanna palya service station,1,0.023203079884504332
+184,Uttarahalli,9787,296.9,UTTARAHALLI,4.0,North East - 3,Manorayanna palya service station,1,0.03033616021252682
+185,Yelachenahalli,7105,180.07,YELACHENAHALLI,4.0,North East - 3,Manorayanna palya service station,1,0.025344123856439128
+186,Jaraganahalli,3074,77.46,JARAGANAHALLI,4.0,North East - 3,Manorayanna palya service station,1,0.02519843851659076
+187,Puttenahalli,4713,145.7,PUTTENAHALLI,4.0,North East - 3,Manorayanna palya service station,1,0.03091449183110545
+188,Bilekahalli,4412,232.93,BILEKAHALLI,4.0,North East - 3,Manorayanna palya service station,1,0.05279465095194923
+189,Hongasandra,8478,328.64,HONGASANDRA,4.0,North East - 3,Manorayanna palya service station,1,0.03876385940080208
+190,Mangammanapalya,3380,88.99,MANGAMMANAPALYA,4.0,North East - 3,Manorayanna palya service station,1,0.026328402366863905
+191,Singasandra,4790,182.52,SINGASANDRA,4.0,North East - 3,Manorayanna palya service station,1,0.038104384133611696
+191,Singsandra,1157,43.86,SINGSANDRA,4.0,North East - 3,Manorayanna palya service station,1,0.03790838375108038
+192,Begur,7589,326.2,BEGUR,4.0,North East - 3,Manorayanna palya service station,1,0.04298326525233891
+193,Arakere,10130,336.18,ARAKERE,4.0,North East - 3,Manorayanna palya service station,1,0.033186574531095754
+194,Gottigere,4701,104.39,GOTTIGERE,4.0,North East - 3,Manorayanna palya service station,1,0.022205913635396726
+195,Konanakunte,10337,283.26,KONANAKUNTE,4.0,North East - 3,Manorayanna palya service station,1,0.027402534584502272
+196,Anjanapura,10279,398.77,ANJANAPURA,4.0,North East - 3,Manorayanna palya service station,1,0.03879462982780426
+197,Vasanthapura,4296,127.33,VASANTHAPURA,4.0,North East - 3,Manorayanna palya service station,1,0.029639199255121044
+198,Hemmigepura,6056,142.71,HEMMIGEPURA,4.0,North East - 3,Manorayanna palya service station,1,0.023565059445178338
