@@ -10,7 +10,8 @@ const AuthForms = () => {
 
   // Form State
   const [formData, setFormData] = useState({
-    name: '',
+    user: '',
+    email: '',
     mobile: '',
     aadhaar: '',
     vehicle: '',
@@ -34,7 +35,7 @@ const AuthForms = () => {
       
       // Mock User Data based on role
       const mockUser = {
-        name: formData.name || (selectedRole === 'official' ? 'Gov Official' : 'User'),
+        name: formData.user || (selectedRole === 'official' ? 'Gov Official' : 'User'),
         role: selectedRole === 'official' ? 'BWSSB Official' : selectedRole === 'worker' ? 'Tanker Worker' : 'Customer',
         id: selectedRole === 'official' ? formData.officialId : 'USR-1234'
       };
@@ -104,9 +105,11 @@ const AuthForms = () => {
         {/* CUSTOMER & WORKER REGISTRATION */}
         {authMode === 'register' && selectedRole !== 'official' && (
           <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }}>
-            <InputField label="Full Name" name="name" placeholder="Enter your full name" />
+            <InputField label="Full Name" name="user" placeholder="Enter your full name" />
+            <InputField label="Email Address" name="email" type="email" placeholder="Enter your email" />
             <InputField label="Mobile Number" name="mobile" type="tel" placeholder="+91 98765 43210" />
             <InputField label="Aadhaar Number" name="aadhaar" placeholder="12-digit Aadhaar number" />
+            <InputField label="Password" name="password" type="password" placeholder="Create a strong password" />
             
             {/* WORKER SPECIFIC */}
             {selectedRole === 'worker' && (
