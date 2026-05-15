@@ -107,17 +107,11 @@ const AuthForms = () => {
         {/* CUSTOMER & WORKER REGISTRATION */}
         {authMode === 'register' && selectedRole !== 'official' && (
           <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }}>
-<<<<<<< HEAD
-            <InputField label="Full Name" name="user" placeholder="Enter your full name" />
-            <InputField label="Email Address" name="email" type="email" placeholder="Enter your email" />
-            <InputField label="Mobile Number" name="mobile" type="tel" placeholder="+91 98765 43210" />
-            <InputField label="Aadhaar Number" name="aadhaar" placeholder="12-digit Aadhaar number" />
-            <InputField label="Password" name="password" type="password" placeholder="Create a strong password" />
-=======
-            <InputField label="Full Name" name="name" placeholder="Enter your full name" value={formData.name} onChange={handleChange} />
+            <InputField label="Full Name" name="user" placeholder="Enter your full name" value={formData.user} onChange={handleChange} />
+            <InputField label="Email Address" name="email" type="email" placeholder="Enter your email" value={formData.email} onChange={handleChange} />
             <InputField label="Mobile Number" name="mobile" type="tel" placeholder="+91 98765 43210" value={formData.mobile} onChange={handleChange} />
             <InputField label="Aadhaar Number" name="aadhaar" placeholder="12-digit Aadhaar number" value={formData.aadhaar} onChange={handleChange} />
->>>>>>> 69fcec5 (fixed forms)
+            <InputField label="Password" name="password" type="password" placeholder="Create a strong password" value={formData.password} onChange={handleChange} />
             
             {/* WORKER SPECIFIC */}
             {selectedRole === 'worker' && (
