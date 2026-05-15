@@ -7,7 +7,7 @@ import MapboxWrapper from '../components/maps/MapboxWrapper';
 import { MOCK_DASHBOARD_STATS, MOCK_CRISIS_ALERTS } from '../mock/dashboardStats';
 import { useAlertStore } from '../store/alertStore';
 import { LineChart, Line, XAxis, YAxis, Tooltip, ResponsiveContainer } from 'recharts';
-import { LayoutDashboard, Activity, Truck, AlertTriangle, Users, Settings, Filter, ArrowUpRight, ArrowDownRight } from 'lucide-react';
+import { LayoutDashboard, Activity, Truck, AlertTriangle, Users, Settings, Filter, ArrowUpRight, ArrowDownRight, Sparkles, BrainCircuit } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 const MOCK_CHART_DATA = [
@@ -94,7 +94,7 @@ const DashboardApp = () => {
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mt-2">
             
             {/* MAIN STATUS MAP (Dominant) */}
-            <Card className="lg:col-span-2 flex flex-col h-[500px] p-0 overflow-hidden relative">
+            <Card className="lg:col-span-2 flex flex-col h-full min-h-[500px] p-0 overflow-hidden relative">
               <div className="p-5 border-b border-surface-border flex justify-between items-center bg-white z-10 relative">
                 <h3 className="font-bold text-content-primary">Bengaluru Water Status Map</h3>
                 <Badge>Live</Badge>
@@ -114,33 +114,73 @@ const DashboardApp = () => {
             </Card>
 
             {/* AI CRISIS PREDICTION */}
-            <div className="flex flex-col gap-6">
-              <Card className="h-full flex flex-col">
-                <div className="flex justify-between items-center mb-4">
-                  <h3 className="font-bold text-content-primary">AI Crisis Prediction</h3>
-                  <span className="text-xs text-content-secondary">Next 7 Days</span>
+            <div className="flex flex-col gap-6 font-outfit h-full">
+              <Card className="h-full flex flex-col relative overflow-hidden bg-gradient-to-br from-white to-slate-50 border-t-4 border-t-primary-blue shadow-premium">
+                {/* Decorative background elements */}
+                <div className="absolute top-0 right-0 w-48 h-48 bg-primary-blue/10 rounded-full blur-3xl -mr-16 -mt-16 pointer-events-none"></div>
+                <div className="absolute bottom-0 left-0 w-48 h-48 bg-primary-soft/10 rounded-full blur-3xl -ml-16 -mb-16 pointer-events-none"></div>
+
+                <div className="flex justify-between items-center mb-5 relative z-10">
+                  <div className="flex items-center gap-3">
+                    <div className="bg-primary-cyan p-2 rounded-xl">
+                      <Sparkles className="w-5 h-5 text-primary-blue" />
+                    </div>
+                    <h3 className="font-bold text-xl text-content-primary tracking-tight">AI Insights</h3>
+                  </div>
+                  <span className="text-xs font-semibold px-3 py-1 bg-white rounded-full border border-surface-border text-content-secondary shadow-sm">Next 7 Days</span>
                 </div>
                 
-                <div className="flex-1 space-y-4 overflow-y-auto pr-2 custom-scrollbar">
+                <div className="flex-1 space-y-4 overflow-y-auto pr-2 custom-scrollbar relative z-10">
                   {MOCK_CRISIS_ALERTS.map(alert => (
-                    <div key={alert.id} className="border border-surface-border rounded-xl p-3 bg-surface hover:shadow-soft transition-all cursor-pointer">
-                      <div className="flex justify-between items-start mb-2">
-                        <h4 className="font-bold text-sm text-content-primary">{alert.area}</h4>
+                    <motion.div 
+                      whileHover={{ scale: 1.015 }}
+                      key={alert.id} 
+                      className={`border rounded-xl p-4 transition-all cursor-pointer relative overflow-hidden backdrop-blur-sm ${
+                        alert.risk === 'High Risk' 
+                          ? 'bg-red-50/70 border-red-200 hover:border-red-400 hover:shadow-[0_4px_20px_-2px_rgba(239,68,68,0.25)]' 
+                          : alert.risk === 'Medium Risk'
+                            ? 'bg-amber-50/70 border-amber-200 hover:border-amber-400 hover:shadow-[0_4px_20px_-2px_rgba(245,158,11,0.25)]'
+                            : 'bg-emerald-50/70 border-emerald-200 hover:border-emerald-400 hover:shadow-[0_4px_20px_-2px_rgba(16,185,129,0.25)]'
+                      }`}
+                    >
+                      <div className="flex justify-between items-start mb-4">
+                        <h4 className="font-bold text-content-primary text-[15px]">{alert.area}</h4>
                         <Badge variant={alert.risk === 'High Risk' ? 'danger' : alert.risk === 'Medium Risk' ? 'warning' : 'success'}>
                           {alert.risk}
                         </Badge>
                       </div>
-                      <p className="text-xs text-content-secondary mb-2">Confidence: <span className="font-medium text-content-primary">{alert.confidence}</span></p>
                       
-                      <div className="bg-white p-2 rounded border border-surface-border">
-                        <p className="text-[10px] text-content-secondary font-medium uppercase tracking-wider mb-1">Risk Factors:</p>
-                        <ul className="text-xs text-content-primary list-disc pl-4">
+                      <div className="flex items-center gap-3 mb-4">
+                        <div className="flex-1 h-2 bg-white/60 rounded-full overflow-hidden border border-black/5 shadow-inner">
+                          <motion.div 
+                            initial={{ width: 0 }}
+                            animate={{ width: alert.confidence }}
+                            transition={{ duration: 1, ease: "easeOut" }}
+                            className={`h-full rounded-full ${
+                              alert.risk === 'High Risk' ? 'bg-gradient-to-r from-red-500 to-red-400' : alert.risk === 'Medium Risk' ? 'bg-gradient-to-r from-amber-500 to-amber-400' : 'bg-gradient-to-r from-emerald-500 to-emerald-400'
+                            }`}
+                          ></motion.div>
+                        </div>
+                        <span className="text-xs font-bold text-content-primary font-mono bg-white/80 px-2 py-0.5 rounded border border-black/5">{alert.confidence} AI Confidence</span>
+                      </div>
+                      
+                      <div className="bg-white/90 backdrop-blur-md p-3 rounded-xl border border-black/5 shadow-sm">
+                        <div className="flex items-center gap-2 mb-2.5">
+                          <BrainCircuit className="w-4 h-4 text-primary-blue" />
+                          <p className="text-[10px] text-content-secondary font-bold uppercase tracking-widest">Risk Factors</p>
+                        </div>
+                        <ul className="text-xs text-content-primary space-y-2">
                           {alert.reasons.map((reason, idx) => (
-                            <li key={idx}>{reason}</li>
+                            <li key={idx} className="flex items-start gap-2.5">
+                              <span className={`w-1.5 h-1.5 rounded-full mt-1 shrink-0 ${
+                                alert.risk === 'High Risk' ? 'bg-red-400' : alert.risk === 'Medium Risk' ? 'bg-amber-400' : 'bg-emerald-400'
+                              }`}></span>
+                              <span className="leading-relaxed font-medium">{reason}</span>
+                            </li>
                           ))}
                         </ul>
                       </div>
-                    </div>
+                    </motion.div>
                   ))}
                 </div>
               </Card>

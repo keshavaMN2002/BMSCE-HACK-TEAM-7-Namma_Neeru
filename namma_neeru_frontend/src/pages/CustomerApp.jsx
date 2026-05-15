@@ -5,6 +5,7 @@ import Button from '../components/shared/Button';
 import Card from '../components/shared/Card';
 import { ArrowRight, AlertTriangle, Truck, Activity, Droplet, Clock, Map, BellRing } from 'lucide-react';
 import heroImage from '../assets/back-ground.png';
+import BengaluruHeatmap from '../components/BengaluruHeatmap';
 
 const Badge = ({ text, className }) => (
   <span className={className}>{text}</span>
@@ -191,12 +192,9 @@ const CustomerApp = () => {
                   </select>
                 </div>
                 
-                {/* CSS Mock Heatmap representing Bengaluru layout */}
-                <div className="flex-1 w-full bg-slate-50 rounded-xl border border-surface-border flex items-center justify-center relative overflow-hidden">
-                  <div className="absolute inset-0 opacity-40 blur-[20px]" style={{
-                    background: 'radial-gradient(circle at 30% 40%, #3B82F6 0%, transparent 40%), radial-gradient(circle at 70% 60%, #F59E0B 0%, transparent 40%), radial-gradient(circle at 60% 80%, #EF4444 0%, transparent 30%), radial-gradient(circle at 40% 70%, #10B981 0%, transparent 40%)'
-                  }}></div>
-                  <Map className="w-12 h-12 text-slate-300 relative z-10" />
+                {/* Interactive Bengaluru GeoJSON Heatmap */}
+                <div className="flex-1 w-full rounded-xl overflow-hidden border border-surface-border relative">
+                  <BengaluruHeatmap />
                 </div>
                 
                 <div className="flex items-center justify-center gap-6 mt-4 relative z-10">

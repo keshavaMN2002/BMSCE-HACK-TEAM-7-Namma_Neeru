@@ -24,6 +24,8 @@ export default {
       },
       fontFamily: {
         sans: ['Inter', 'Satoshi', 'General Sans', 'sans-serif'],
+        outfit: ['Outfit', 'sans-serif'],
+        mono: ['JetBrains Mono', 'monospace'],
       },
       boxShadow: {
         'soft': '0 4px 20px -2px rgba(0, 0, 0, 0.05)',
