@@ -8,10 +8,20 @@ const Navbar = () => {
   const { user, openModal, logout } = useAuthStore();
   const navigate = useNavigate();
 
-  const handleLogout = () => {
-    logout();
-    navigate('/');
-  };
+  const handleLogout = async () => {
+  try {
+    await fetch("http://127.0.0.1:8000/api/auth/logout", {
+      method: "POST",
+      credentials: "include",
+    });
+
+    logout(); // clear frontend auth state
+
+    navigate("/");
+  } catch (error) {
+    console.error("Logout failed:", error);
+  }
+};
 
   return (
     <nav className="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-surface-border">
