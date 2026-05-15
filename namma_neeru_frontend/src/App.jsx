@@ -8,7 +8,11 @@ import CustomerApp from './pages/CustomerApp';
 import BookApp from './pages/BookApp';
 import WorkerApp from './pages/WorkerApp';
 import DashboardApp from './pages/DashboardApp';
+import NotFound from './pages/NotFound';
+import Unauthorized from './pages/Unauthorized';
 import AuthModal from './components/auth/AuthModal';
+import ProtectedRoute from './components/auth/ProtectedRoute';
+import { ROLES } from './constants/roles';
 
 const queryClient = new QueryClient();
 
@@ -23,13 +27,32 @@ function App() {
     <QueryClientProvider client={queryClient}>
       <Router>
         <Routes>
+          {/* Public Routes */}
           <Route path="/" element={<CustomerApp />} />
-          <Route path="/book" element={<BookApp />} />
-          <Route path="/worker" element={<WorkerApp />} />
-          <Route path="/dashboard" element={<DashboardApp />} />
+          
+          {/* Protected Routes */}
+          <Route path="/book" element={
+            <ProtectedRoute allowedRoles={[ROLES.CUSTOMER]}>
+              <BookApp />
+            </ProtectedRoute>
+          } />
+          <Route path="/worker" element={
+            <ProtectedRoute allowedRoles={[ROLES.WORKER]}>
+              <WorkerApp />
+            </ProtectedRoute>
+          } />
+          <Route path="/dashboard" element={
+            <ProtectedRoute allowedRoles={[ROLES.OFFICIAL]}>
+              <DashboardApp />
+            </ProtectedRoute>
+          } />
+
+          {/* Error Routes */}
+          <Route path="/unauthorized" element={<Unauthorized />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
+        <AuthModal />
       </Router>
-      <AuthModal />
       <Toaster position="top-right" richColors />
     </QueryClientProvider>
   );

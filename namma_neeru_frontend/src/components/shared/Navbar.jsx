@@ -1,10 +1,17 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
-import { Droplet, Bell, User } from 'lucide-react';
+import { NavLink, useNavigate } from 'react-router-dom';
+import { Droplet, Bell, User, LogOut } from 'lucide-react';
 import { useAuthStore } from '../../store/authStore';
+import { ROLES } from '../../constants/roles';
 
 const Navbar = () => {
-  const { user, openModal } = useAuthStore();
+  const { user, openModal, logout } = useAuthStore();
+  const navigate = useNavigate();
+
+  const handleLogout = () => {
+    logout();
+    navigate('/');
+  };
 
   return (
     <nav className="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-surface-border">
@@ -24,11 +31,18 @@ const Navbar = () => {
 
           {/* Navigation */}
           <div className="hidden md:flex space-x-8">
-            <NavLink to="/" className={({ isActive }) => `text-sm font-medium transition-colors ${isActive ? 'text-primary-blue border-b-2 border-primary-blue pb-5 pt-6' : 'text-content-secondary hover:text-content-primary pt-6 pb-5'}`} end>Home</NavLink>
-            <NavLink to="/book" className={({ isActive }) => `text-sm font-medium transition-colors ${isActive ? 'text-primary-blue border-b-2 border-primary-blue pb-5 pt-6' : 'text-content-secondary hover:text-content-primary pt-6 pb-5'}`}>Book Tanker</NavLink>
-            <NavLink to="/worker" className={({ isActive }) => `text-sm font-medium transition-colors ${isActive ? 'text-primary-blue border-b-2 border-primary-blue pb-5 pt-6' : 'text-content-secondary hover:text-content-primary pt-6 pb-5'}`}>Track Order</NavLink>
-            <NavLink to="/dashboard" className={({ isActive }) => `text-sm font-medium transition-colors ${isActive ? 'text-primary-blue border-b-2 border-primary-blue pb-5 pt-6' : 'text-content-secondary hover:text-content-primary pt-6 pb-5'}`}>Crisis Alerts</NavLink>
-            <NavLink to="/dashboard" className={({ isActive }) => `text-sm font-medium transition-colors ${isActive ? 'text-primary-blue border-b-2 border-primary-blue pb-5 pt-6' : 'text-content-secondary hover:text-content-primary pt-6 pb-5'}`} end>Dashboard</NavLink>
+            {(!user || user.role === ROLES.CUSTOMER) && (
+              <NavLink to="/" className={({ isActive }) => `text-sm font-medium transition-colors ${isActive ? 'text-primary-blue border-b-2 border-primary-blue pb-5 pt-6' : 'text-content-secondary hover:text-content-primary pt-6 pb-5'}`} end>Home</NavLink>
+            )}
+            {user?.role === ROLES.CUSTOMER && (
+              <NavLink to="/book" className={({ isActive }) => `text-sm font-medium transition-colors ${isActive ? 'text-primary-blue border-b-2 border-primary-blue pb-5 pt-6' : 'text-content-secondary hover:text-content-primary pt-6 pb-5'}`}>Book Tanker</NavLink>
+            )}
+            {user?.role === ROLES.WORKER && (
+              <NavLink to="/worker" className={({ isActive }) => `text-sm font-medium transition-colors ${isActive ? 'text-primary-blue border-b-2 border-primary-blue pb-5 pt-6' : 'text-content-secondary hover:text-content-primary pt-6 pb-5'}`}>Track Order</NavLink>
+            )}
+            {user?.role === ROLES.OFFICIAL && (
+              <NavLink to="/dashboard" className={({ isActive }) => `text-sm font-medium transition-colors ${isActive ? 'text-primary-blue border-b-2 border-primary-blue pb-5 pt-6' : 'text-content-secondary hover:text-content-primary pt-6 pb-5'}`} end>Dashboard</NavLink>
+            )}
           </div>
 
           {/* Right Actions */}
@@ -39,14 +53,23 @@ const Navbar = () => {
             </button>
             
             {user ? (
-              <div className="flex items-center gap-3 cursor-pointer group p-1.5 rounded-full hover:bg-slate-50 transition-colors border border-transparent hover:border-surface-border">
-                <div className="w-9 h-9 rounded-full bg-slate-200 flex items-center justify-center overflow-hidden border border-slate-300">
-                  <User className="w-5 h-5 text-content-secondary" />
+              <div className="flex items-center gap-3 p-1.5 rounded-full hover:bg-slate-50 transition-colors border border-transparent hover:border-surface-border">
+                <div className="flex items-center gap-2">
+                  <div className="w-9 h-9 rounded-full bg-slate-200 flex items-center justify-center overflow-hidden border border-slate-300">
+                    <User className="w-5 h-5 text-content-secondary" />
+                  </div>
+                  <div className="hidden sm:block pr-2">
+                    <p className="text-sm font-bold text-content-primary leading-none mb-1">{user.name}</p>
+                    <p className="text-[10px] text-content-secondary font-medium uppercase tracking-wider leading-none">{user.role}</p>
+                  </div>
                 </div>
-                <div className="hidden sm:block pr-2">
-                  <p className="text-sm font-bold text-content-primary leading-none mb-1">{user.name}</p>
-                  <p className="text-[10px] text-content-secondary font-medium uppercase tracking-wider leading-none">{user.role}</p>
-                </div>
+                <button 
+                  onClick={handleLogout}
+                  className="p-2 text-red-500 hover:text-red-700 hover:bg-red-50 rounded-full transition-colors"
+                  title="Logout"
+                >
+                  <LogOut className="w-4 h-4" />
+                </button>
               </div>
             ) : (
               <div className="flex items-center gap-2 sm:gap-3 ml-2">

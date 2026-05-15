@@ -3,6 +3,7 @@ import { useAuthStore } from '../../store/authStore';
 import { ArrowLeft, ArrowRight, ShieldCheck, CheckCircle2 } from 'lucide-react';
 import { toast } from 'sonner';
 import { motion } from 'framer-motion';
+import { useNavigate } from 'react-router-dom';
 
 const InputField = ({ label, name, type = 'text', placeholder, required = true, value, onChange }) => (
   <div className="mb-4">
@@ -20,8 +21,9 @@ const InputField = ({ label, name, type = 'text', placeholder, required = true, 
 );
 
 const AuthForms = () => {
-  const { authMode, selectedRole, setAuthMode, setSelectedRole, login } = useAuthStore();
+  const { authMode, selectedRole, setAuthMode, setSelectedRole, login, intendedRoute, setIntendedRoute } = useAuthStore();
   const [isLoading, setIsLoading] = useState(false);
+  const navigate = useNavigate();
 
   // Form State
   const [formData, setFormData] = useState({
@@ -65,6 +67,11 @@ const AuthForms = () => {
           icon: <CheckCircle2 className="w-5 h-5 text-green-500" />
         }
       );
+      
+      if (intendedRoute) {
+        navigate(intendedRoute);
+        setIntendedRoute(null);
+      }
     }, 1200);
   };
 
