@@ -5,6 +5,7 @@ from slowapi.util import get_remote_address
 from slowapi.errors import RateLimitExceeded
 from app.routes import health_routes, auth_routes, customer_routes, worker_routes, official_routes
 from app.config.database import engine, Base
+from app.routes import ml_routes
 
 # Create database tables
 # (In production, use Alembic for migrations instead of doing this)
@@ -36,6 +37,11 @@ app.include_router(auth_routes.router)
 app.include_router(customer_routes.router)
 app.include_router(worker_routes.router)
 app.include_router(official_routes.router)
+app.include_router(
+    ml_routes.router,
+    prefix="/api/ml",
+    tags=["ML"]
+)
 
 @app.get("/")
 @limiter.limit("5/minute")
